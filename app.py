@@ -93,4 +93,4 @@ if __name__ == "__main__":
     try:
         web.run_app(APP, host="localhost", port=8000)
     except Exception as error:
-       raise error
+        raise error
