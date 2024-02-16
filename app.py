@@ -27,6 +27,7 @@ CONFIG = DefaultConfig()
 SETTINGS = BotFrameworkAdapterSettings(CONFIG.APP_ID, CONFIG.APP_PASSWORD)
 ADAPTER = BotFrameworkAdapter(SETTINGS)
 
+print('Launched bot app...')
 
 # Catch-all for errors.
 async def on_error(context: TurnContext, error: Exception):
@@ -70,6 +71,7 @@ BOT = TeamsConversationBot(CONFIG.APP_ID, CONFIG.APP_PASSWORD)
 # Listen for incoming requests on /api/messages.
 async def messages(req: Request) -> Response:
     # Main bot message handler.
+    print('Message handler started..')
     if "application/json" in req.headers["Content-Type"]:
         body = await req.json()
     else:
