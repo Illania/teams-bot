@@ -24,7 +24,7 @@ CONFIG = DefaultConfig()
 
 # Create adapter.
 # See https://aka.ms/about-bot-adapter to learn more about how bots work.
-SETTINGS = BotFrameworkAdapterSettings(CONFIG.APP_ID, CONFIG.APP_PASSWORD)
+SETTINGS = BotFrameworkAdapterSettings("666a2b0d-4a7a-4fb7-a5d6-a135bb8d9e5b", "Y-I8Q~2Ydz~Pzi_FSFmEcKHCCNOzX0Y4A6nEzbei")
 ADAPTER = BotFrameworkAdapter(SETTINGS)
 
 print('Launched bot app...')
@@ -65,7 +65,7 @@ ADAPTER.on_turn_error = on_error
 APP_ID = SETTINGS.app_id if SETTINGS.app_id else uuid.uuid4()
 
 # Create the Bot
-BOT = TeamsConversationBot(CONFIG.APP_ID, CONFIG.APP_PASSWORD)
+BOT = TeamsConversationBot("666a2b0d-4a7a-4fb7-a5d6-a135bb8d9e5b", "Y-I8Q~2Ydz~Pzi_FSFmEcKHCCNOzX0Y4A6nEzbei")
 
 
 # Listen for incoming requests on /api/messages.
